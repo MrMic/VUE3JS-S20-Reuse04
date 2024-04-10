@@ -3,8 +3,8 @@ import { ref } from 'vue';
 //          ╔═════════════════════════════════════════════════════════╗
 //          ║                        USEALERT                         ║
 //          ╚═════════════════════════════════════════════════════════╝
-export default function useAlert() {
-  const alertIsVisible = ref(false);
+export default function useAlert(startVisible = false) {
+  const alertIsVisible = ref(startVisible);
 
   function showAlert() {
     alertIsVisible.value = true;
